@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>跳动的心</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .fa {
+      width: 200px;
+      height: 200px;
+      margin: 300px auto;
+    }
+    .heart {
+      display: inline-block;
+
+      transition: all 1s;
+      position: relative;
+    }
+    .heart:hover {
+      transform: scale(1.5);
+    }
+    /* .heart:active{
+    transform: scale(1.5);
+} */
+    .left {
+      width: 50px;
+      height: 50px;
+      border-radius: 50% 0 0 50%;
+      position: absolute;
+      bottom: 100%;
+      right: 100%;
+      transform: rotate(45deg) translateX(31px);
+    }
+    .heart > .right {
+      width: 50px;
+      height: 50px;
+      border-radius: 50% 50% 0 0;
+      position: absolute;
+      bottom: 100%;
+      left: 100%;
+      transform: rotate(45deg) translateY(31px);
+      background-color: black;
+    }
+    .heart > .bottom {
+      width: 50px;
+      height: 50px;
+      transform: rotate(45deg);
+    }
+    .heart > div {
+      background-color: black;
+    }
+
+    /* transition使用方法（transition:属性名 时长 过渡方式 时长
+    eg:transition:width 200ms liner 1s）  liner/ease/ease in/ ease-out */
+  </style>
+  <body>
+    <div class="fa">
+      <div class="heart">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .fa {
+        margin: 0 auto;
+        width: 1000px;
+        height: 500px;
+        perspective: 2000px;
+        border: 1px solid blue;
+        position: relative;
+      }
+      .demo {
+        margin: 0 auto;
+        border: 2px solid black;
+        width: 100px;
+        height: 200px;
+      }
+
+      /* transforn:translate值 */
+
+      /* .demo:hover {
+        border: 2px solid black;
+        width: 100px;
+        height: 200px;
+        transform: translateX(200px);
+    transform: translateY(200px);
+        transform: translate(100px,200px,300px);  
+        transform: translateZ(50px);
+        transform: translateY(50%)
+      } */
+
+      /* 常见居中对齐方法 */
+      .demo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%); /*或者transform:translate(-50%,-50%)*/
+      }
+
+
+      /* scale属性值为缩放的意思 */
+      .demo:hover{
+          transition: all 1s;                      /*设置动画时间*/
+          transform: scale(1.5);
+      }
+
+      /* rotate属性值意思为旋转 */
+      .demo:hover{
+          transform: rotateZ(45deg);
+      }
+
+
+      /* skew值是倾斜的意思 */
+      .demo:hover{transform: skew(20deg);}
+    </style>
+  </head>
+  <body>
+    <div class="fa">
+      <div class="demo"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动画</title>
+    <link rel="stylesheet" href="./index.js" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #fa {
+        border: 1px solid red;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        left: 0;
+        top: 0;
+      }
+
+      #demo {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        transition: all 1s linear;
+      }
+
+      #demo.end {
+        transform: translate(500px,500px);
+       
+      }
+      .bb {
+        width: 100px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="fa"></div>
+
+      <div class="bb">
+        <a href="./index.html">
+          <button>运行</button>
+        </a>
+      </div>
+
+      <div id="demo"></div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
