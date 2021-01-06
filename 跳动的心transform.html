@@ -6,58 +6,80 @@
     <title>跳动的心</title>
   </head>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    .fa {
-      width: 200px;
-      height: 200px;
-      margin: 300px auto;
-    }
-    .heart {
-      display: inline-block;
+    
+      /* transform:四种取值 移动translate （值可以为像素或者百分数）/缩放scale/旋转rotate/ 倾斜skew  
+      transform不同取值要合并写不然会覆盖 eg: transform:translate(50px,50px) scale(1.5) skewY(60px) rotateY(50px)
+      line 元素不支持transform
+      transition 作为过渡，使用方法（transition:属性名 时长 过渡方式 时长
+      eg:transition:width 200ms liner 1s）  liner/ease/ease in/ ease-out /step-start/ step-end
+      [过渡方式可看文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function)
 
-      transition: all 1s;
-      position: relative;
-    }
-    .heart:hover {
-      transform: scale(1.5);
-    }
-    /* .heart:active{
-    transform: scale(1.5);
-} */
-    .left {
-      width: 50px;
-      height: 50px;
-      border-radius: 50% 0 0 50%;
-      position: absolute;
-      bottom: 100%;
-      right: 100%;
-      transform: rotate(45deg) translateX(31px);
-    }
-    .heart > .right {
-      width: 50px;
-      height: 50px;
-      border-radius: 50% 50% 0 0;
-      position: absolute;
-      bottom: 100%;
-      left: 100%;
-      transform: rotate(45deg) translateY(31px);
-      background-color: black;
-    }
-    .heart > .bottom {
-      width: 50px;
-      height: 50px;
-      transform: rotate(45deg);
-    }
-    .heart > div {
-      background-color: black;
-    }
+      animation用法:时长(1s) 过渡方式（与transform一样）延迟（1s）次数（3/infinite）方向（reverse/alternate/alternate-reverse）
+      填充模式（none /forwards/backwards/both ） 是否暂停{runing/paused} 动画名（关键帧的命名）
 
-    /* transition使用方法（transition:属性名 时长 过渡方式 时长
-    eg:transition:width 200ms liner 1s）  liner/ease/ease in/ ease-out */
+      关键帧语法示意：
+      @keyframes heart {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.5);
+      } */
+    
+
+    }
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        .fa {
+          width: 200px;
+          height: 200px;
+          margin: 300px auto;
+        }
+        .heart {
+          display: inline-block;
+
+          transition: all 1s;
+          position: relative;
+        }
+        .heart:hover {
+          transform: scale(1.5);
+        }
+        /* .heart:active{
+        transform: scale(1.5);
+    } */
+        .left {
+          width: 50px;
+          height: 50px;
+          border-radius: 50% 0 0 50%;
+          position: absolute;
+          bottom: 100%;
+          right: 100%;
+          transform: rotate(45deg) translateX(31px);
+        }
+        .heart > .right {
+          width: 50px;
+          height: 50px;
+          border-radius: 50% 50% 0 0;
+          position: absolute;
+          bottom: 100%;
+          left: 100%;
+          transform: rotate(45deg) translateY(31px);
+          background-color: black;
+        }
+        .heart > .bottom {
+          width: 50px;
+          height: 50px;
+          transform: rotate(45deg);
+        }
+        .heart > div {
+          background-color: black;
+        }
+
+        /* transition使用方法（transition:属性名 时长 过渡方式 时长
+        eg:transition:width 200ms liner 1s）  liner/ease/ease in/ ease-out */
   </style>
   <body>
     <div class="fa">
