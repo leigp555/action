@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫</title>
+
+
+    <style>
+        html{
+            perspective: 800px;
+        }
+        *{
+            
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 128px;
+            height: 128px;
+           
+            margin: 200px auto;
+           
+            transform-style: preserve-3d;
+            position: relative;
+            animation: run 10s infinite   linear;
+           
+        }
+        .container>div>img{
+            
+            
+            vertical-align: top;
+        }
+        .container>div{
+            opacity: 0.7;
+            width: 128px;
+            height: 128px;
+            position: absolute;
+            background-color:black;
+        }
+        .a{
+            transform: rotateY(90deg) translateZ(64px);
+        }
+        .b{
+            transform: rotateY(-90deg) translateZ(64px);
+        }
+        .c{
+            transform: rotateX(-90deg) translateZ(64px);
+        }
+        .d{
+            transform: rotateX(90deg) translateZ(64px);
+        }
+        .e{
+            transform: rotateY(0deg) translateZ(64px);
+        }
+        .f{
+            transform: rotateY(180deg) translateZ(64px);
+        }
+        @keyframes run {
+            0%{ transform: rotateX(0) rotateZ(0);}
+            
+            100%{ transform: rotateX(1turn) rotateZ(1turn);}
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="a"><img src="./图片/dahuangmao-01.png" alt=""></div>
+        <div class="b"><img src="./图片/dahuangmao-02.png" alt=""></div>
+        <div class="c"><img src="./图片/dahuangmao-03.png" alt=""></div>
+        <div class="d"><img src="./图片/dahuangmao-04.png" alt=""></div>
+        <div class="e"><img src="./图片/dahuangmao-05.png" alt=""></div>
+        <div class="f"><img src="./图片/dahuangmao-06.png" alt=""></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
